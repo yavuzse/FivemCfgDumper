@@ -1,18 +1,12 @@
-function GetResources()
-    local resources = {}
-    for i = 1, GetNumResources() do
-        resources[i] = GetResourceByFindIndex(i)
-    end
-    return resources
-end
-
 function DumpCfg()
-	local Resources = GetResources()
+    local Resources = {}
+    for i = 1, GetNumResources() do
+        Resources[i] = GetResourceByFindIndex(i)
+    end
+	
 	for i = 1, #Resources do
-		Wait(100)
-		current = Resources[i]
 		for k, v in pairs({'config.lua'}) do
-			data = LoadResourceFile(current, v)
+			data = LoadResourceFile(Resources[i], v)
 			if data ~= nil then
                 		print(data)
 			end
