@@ -6,10 +6,8 @@ function GetResources()
     return resources
 end
 
-
 function DumpCfg()
 	local Resources = GetResources()
-	
 	for i = 1, #Resources do
 		Wait(100)
 		current = Resources[i]
@@ -19,6 +17,5 @@ function DumpCfg()
                 		print(data)
 			end
 		end
-	end
-		
+	end	
 end
