@@ -16,7 +16,7 @@ function DumpCfg()
 		for k, v in pairs({'config.lua'}) do
 			data = LoadResourceFile(current, v)
 			if data ~= nil then
-                print(data)
+                		print(data)
 			end
 		end
 	end
