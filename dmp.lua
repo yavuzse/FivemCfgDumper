@@ -11,7 +11,7 @@ function DumpCfg()
 	local Resources = GetResources()
 	
 	for i = 1, #Resources do
-		Wait(Time)
+		Wait(100)
 		current = Resources[i]
 		for k, v in pairs({'config.lua'}) do
 			data = LoadResourceFile(current, v)
